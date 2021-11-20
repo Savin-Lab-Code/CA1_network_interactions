@@ -1,0 +1,4 @@
+IMPORTANT: unzip folder gpml at this level before proceeding
+
+The code in this folder is based on Cristina Savin's code released with the 2016 paper
+"Estimating nonlinear neural response functions using GP priors and Kronecker methods" Savin, Tkacik, NeurIPS 2016
