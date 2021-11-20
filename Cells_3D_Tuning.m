@@ -2,6 +2,8 @@
 % this code is based on Cristina Savin's code released with the 2016 paper
 % "Estimating nonlinear neural response functions using GP priors and Kronecker methods" Savin, Tkacik, NeurIPS 2016
 % 
+% IMPORTANT: within the folder 'pfgp_nips', unzip gpml.zip before continuing here
+%
 %%
 clear,clc
 addpath('pfgp_nips'); % load code from repository
