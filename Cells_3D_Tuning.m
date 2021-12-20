@@ -34,6 +34,11 @@ for i = 1:N
     neuron = neurons(i)
     maxiter = 100;
     [pf, hyp,counts,ll] = getPFGPGridFkFast(y(:,neuron),x,nk,n,n,npk,maxiter);
+    if (max(pf.mtuning(:)) > 100 || isnan(ll) || ll > 100) && maxiter > 2
+        % if it explodes, reduce iterations
+        maxiter = round(maxiter / 2);
+        [pf, hyp,counts,ll] = getPFGPGridFkFast(y(:,neuron),x,nk,n,n,npk,maxiter);
+    end
     pfs(neuron,1,:,:,:) = pf.mp;
     pfs(neuron,2,:,:,:) = pf.varp;
 end
